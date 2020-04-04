@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% block contents %}
+
+<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center mt-5 border-bottom">
+    <h1 class="h2">Welcome to Home</h1>
+</div>
+<br>
+<div>
+    <a href="{% url 'app_folder:list' %}">広告主一覧</a>
+</div>
+<div>
+    <p>登録したFacebookのページを登録順に表示します。</p>
+</div>
+<br>
+<div>
+    <a href="{% url 'app_folder:search_id' %}">FacdbookID登録</a>
+</div>
+<div>
+    <p>スクレイピング対象のFacebookのID登録をします。</p>
+</div>
+<br>
+<div>
+    <a href="/#">広告を日付でソート</a>
+</div>
+<div>
+    <p>登録準に並んでいるFacebookのページを日付順に並べ替えます。</p>
+</div>
+<br>
+<div>
+    <a href="/#">広告をページの種類でソート</a>
+</div>
+<div>
+    <p>Facebookの広告の種類で並び変えて、日付でフィルターをかけます。</p>
+</div>
+<br>
+<div>
+    <a href="/#">お気に入り</a>
+</div>
+<div>
+    <p>お気に入りに登録したFacebook広告のページ一覧です。</p>
+</div>
+<br>
+<div>
+    <a href="/#">memo</a>
+</div>
+<div>
+    <p>メモを挟んだFacebook広告のページ一覧です。</p>
+</div>
+<p>上２つしかリンク機能しないです。</p>
+{% endblock %}

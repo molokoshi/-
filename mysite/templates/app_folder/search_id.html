@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block contents %}
+
+<h4 class="mt-5 mb-4 border-bottom">Facebook IDを入力</h4>
+<form method="POST">
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-2">
+      <form method="POST" action=''></form>
+        {% csrf_token %}
+        {{ form }}
+    </div>
+    <div class="col-2">
+      <div class="text-left align-bottom">
+          <button type="submit" name="button" class="btn btn-info">
+            追加する
+          </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+</form>
+<div>{{ insert }}</div>
+<div>
+  <p>FacebookのIDがわからないときは<a href="https://findmyfbid.com/" target="_blank">ここ</a>
+    を参照してください。<br>※外部のサイトへリンクします。</p>
+</div>
+
+{% endblock %}

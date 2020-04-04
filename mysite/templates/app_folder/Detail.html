@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% block contents %}
+<div class="border rounded" style="padding:10px; margin:10px;">
+    <h3>広告主: {{ baseinfo.master}}</h3>
+    <h3>Facebook id: {{ baseinfo.base_id}}</h3>
+    <h3>いいね！の数: {{ baseinfo.nice}}</h3>
+</div>
+
+
+
+
+<div class="container-fluid">
+    <div class="row">
+        {% for detailinfo in detailinfo_list %}
+        <div class="col-md-4 col-lg-3 border rounded" style="padding:10px; margin:5px;">
+            <div style="padding:5px;">
+                <div class="border-bottom" style="padding:2px;">
+                    <div>広告ID: {{ detailinfo.ad_id }}</div>
+                    <div>スポンサー名: {{ detailinfo.name }}</div>
+                </div>
+                <div class="border-bottom" style="padding:2px;">
+                    <div>{{ detailinfo.main_text }}</div>
+                    <div>{{ detailinfo.sub_text }}</div>
+                </div>
+                <div>
+                    <img src="{{ detailinfo.sample_img }}" alt="画像" onerror="this.src='https://lh3.googleusercontent.com/proxy/BMbbElmRSgrSDxHf0ONH8Hhc-LmjHhMHi_AUEfmGPCL1mPjFViJeDK6m0wReOZCpArO4hVPWod-qXx4NO0ak9KXXsGa3b_tLh23-_Ss';" width="100%">
+                </div>
+                <div class="border-top" style="padding:2px;">
+                    <div>掲載日: {{ detailinfo.advertise_register }}</div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

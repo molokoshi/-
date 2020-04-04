@@ -1,0 +1,25 @@
+環境: Windows10 64bit
+
+ターミナル:Gitbash
+
+DB: MYSQL(django内のセッティングは消してます。)
+
+言語: Python 3.8.1
+
+モジュール(一部使用せず)
+Package           Version
+----------------- -------
+asgiref           3.2.7
+beautifulsoup4    4.8.2
+DateTime          4.3
+Django            3.0.4
+django-bootstrap4 1.1.1
+mysqlclient       1.4.6
+pip               20.0.2
+pytz              2019.3
+selenium          3.141.0
+setuptools        41.2.0
+soupsieve         2.0
+sqlparse          0.3.1
+urllib3           1.25.8
+zope.interface    5.0.1
